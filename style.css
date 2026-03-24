@@ -1,0 +1,331 @@
+/* ================================
+   RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+  position: fixed;        /* reste collée en haut en scrollant */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #2e7d2e;    /* vert */
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
+  z-index: 100;           /* passe au-dessus de tout */
+}
+
+.logo-icon img {
+  width: 170px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 3rem;
+  margin-left: auto;      /* pousse les liens vers la droite */
+  margin-right: 8rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #e8820c;
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(60%) brightness(0.75);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(156, 139, 120, 0.562); /* orange à 50% de transparence */
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 2rem;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero__title {
+  font-size: 2.8rem;
+  color: rgba(214, 211, 211, 0.973);
+  background: rgba(46, 125, 46, 0.6);
+  padding: 0.5em 0em;
+  border-radius: 45px;
+  width: 711px;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: #e8820c;
+  line-height: 1.9;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================
+   BLOC ORANGE INFO
+================================ */
+.info {
+  background: rgb(240, 101, 9);
+  border-radius: 45px;
+  padding: 2rem 2.5rem;
+  max-width: 700px;
+  margin: 3rem auto;      /* centré, espace en haut et bas */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* ================================
+   FORMULAIRE
+================================ */
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2e7d2e;  /* bordure verte quand actif */
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.btn-soumettre {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  background: #2d2d2d;
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.btn-soumettre:hover {
+  background: #444;
+}
+
+/* ================================
+   CITATION
+================================ */
+.citation {
+  width: 574px;
+  height: 102px;
+  color: #ffffff;
+  background-color: rgb(59, 160, 79);
+  border-radius: 45px;
+  margin: 2rem auto;      /* centré */
+  display: flex;
+  align-items: center;    /* texte centré verticalement */
+  justify-content: center;/* texte centré horizontalement */
+  font-style: italic;
+  text-align: center;
+}
+
+/* ================================
+   DEUX CARTES CÔTE À CÔTE
+================================ */
+
+/* UN seul conteneur flex pour les deux cartes */
+.cartes-wrapper {
+  display: flex;          /* met les cartes côte à côte */
+  flex-direction: row;    /* horizontal */
+  gap: 2rem;              /* espace entre les deux cartes */
+  max-width: 1100px;
+  margin: 3rem auto;      /* centré sur la page */
+  padding: 0 2rem;
+}
+
+/* Chaque carte individuellement */
+.carte {
+  flex: 1;                /* les deux cartes font la même largeur */
+  min-width: 0;           /* empêche le débordement */
+  background: rgb(217, 217, 217);
+  border: 1px solid #ccc;
+  border-radius: 45px;
+  height: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carte-title {
+  color: rgb(52, 160, 79);/* vert */
+  font-size: 1.1rem;
+}
+
+.carte-text {
+  color: rgb(240, 101, 9);/* orange */
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  background: #e8820c;        /* fond orange */
+  display: flex;              /* deux colonnes côte à côte */
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  margin-top: 3rem;
+}
+
+.footer-titre {
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-icones {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* grille 2 colonnes pour les icônes */
+  gap: 1rem;
+  width: fit-content;
+  
+}
+
+.icone {
+  font-size: 2rem;
+  color: #c96a0a;             /* orange foncé */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.icone:hover {
+  color: #ffffff;
+}
+
+.footer-contact p {
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-email {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+@media (max-width: 700px) {
+  .navbar__links {
+    gap: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .hero__title {
+    font-size: 1.7rem;
+    width: 90%;
+    height: auto;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Les cartes s'empilent sur mobile */
+  .cartes-wrapper {
+    flex-direction: column;
+  }
+
+  .citation {
+    width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
