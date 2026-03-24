@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Way – Prépare ton avenir1</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="navbar__logo">
       <div class="logo-icon">
-        <img src="./images/image8.jpg" alt="logo" />
+        <img src="/images/image8.jpg" alt="logo" />
       </div>
     </div>
-    <nav class="navbar__links">
-      <a href="" class="nav-link active">Acceuil</a>
+
+    <!-- Icône hamburger (visible uniquement sur mobile) -->
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar__links" id="menu">
+      <a href="index.html" class="nav-link active">Acceuil</a>
       <a href="" class="nav-link">Que voulez-vous?</a>
       <a href="" class="nav-link">Où s'orienter</a>
     </nav>
@@ -33,7 +44,7 @@
       <p class="hero__subtitle">
         Réalise ton rêve depuis tout petit est un exploit avec nous.<br />
         C'est possible de le faire avec nous — bâtir un avenir futur,<br />
-                  qu'on veut c'est possible !
+        qu'on veut c'est possible !
       </p>
     </div>
   </section>
@@ -118,5 +129,13 @@
 
   </footer>
 
+  <script>
+     function toggleMenu() {
+      /* Ouvre ou ferme le menu en ajoutant/retirant la classe "ouvert" */
+    document.getElementById('menu').classList.toggle('ouvert');
+     }
+  </script>
+
 </body>
+
 </html>

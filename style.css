@@ -329,3 +329,48 @@ body {
     padding: 2rem;
   }
 }
+
+/* Bouton hamburger : caché sur grand écran */
+.hamburger {
+  display: none;            /* invisible sur desktop */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;        /* pousse le bouton à droite */
+  padding: 0.5rem;
+}
+
+/* Les trois barres du hamburger */
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ffffff;      /* barres blanches */
+  border-radius: 3px;
+}
+
+/* Sur mobile : affiche le hamburger, cache les liens */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;          /* visible sur mobile */
+  }
+
+  .navbar__links {
+    display: none;          /* caché par défaut sur mobile */
+    flex-direction: column; /* liens en colonne */
+    position: absolute;     /* se pose sous la navbar */
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #2e7d2e;    /* même vert que la navbar */
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  /* Quand le menu est ouvert */
+  .navbar__links.ouvert {
+    display: flex;
+  }
+}
