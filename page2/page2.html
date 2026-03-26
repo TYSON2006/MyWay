@@ -1,40 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY Way_ prepare ton avenir2</title>
-    <link rel="stylesheet" href="page2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY Way_ prepare ton avenir2</title>
+  <link rel="stylesheet" href="page2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-   
-     <header class="NAVBAR">
-        <div class="navbar__logo">
+
+  <header class="navbar">
+    <div class="navbar__logo">
       <div class="logo-icon">
         <img src="../images/image8.jpg" alt="logo" />
       </div>
-       </div>
-    <nav class="navbar__links">
-      <a href="" class="nav-link active">Acceuil</a>
-      <a href="" class="nav-link">Que voulez-vous?</a>
+    </div>
+
+  
+    <button class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar__links" id="menu">
+      <a href="index.html" class="nav-link active">Acceuil</a>
+      <a href="./page2/page2.html" class="nav-link">Que voulez-vous?</a>
       <a href="" class="nav-link">Où s'orienter</a>
     </nav>
-     </header>
+  </header>
 
-    
-      <section class="hero">
-        <div class="hero-overplay"></div>
-        <img  class="hero__bg" src="./images/image7.jpg" alt="">
-        <div class="hero__content">
-            <h1 class="hero__title">Bienvenue à bord de votre vol pour le future ici les  rêves se réalisent</h1>
-        </div>
-        <div class="ques">
-            <h3>Que voulez-vous?</h3>
-        </div>
-       
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Bienvenue à bord de votre vol pour le future ici les rêves se réalisent</h1>
+      <div class="ques">
+        <h3>Que voulez-vous?</h3>
+      </div>
+    </div>
+  </section>
 
-      </section>
-    
+  <div class="deux">
+    <div class="a">
+      <img src="../images/image4.jpg" alt="">
+      <h3 class="txt1">passionner de diplomatie , relation internationale et géopolitique?</h3>
+      <button><a href="../index.html">clique ici</a></button>
+    </div>
+    <div class="a">
+      <img src="../images/image5.jpg" alt="">
+      <h3 class="txt2">tu aimes l'agro-industrie et les produits phytos?</h3>
+      <button><a href="../index.html">clique ici</a></button>
+    </div>
+  </div>
+
+  <div class="un">
+    <div class="u">
+      <img src="../images/image6.jpg" alt="">
+      <h3 class="txt1">tu reves d'etre ingénieure en batiment?</h3>
+      <button><a href="../index.html">clique ici</a></button>
+    </div>
+    <div class="u">
+      <img src="../images/image10.jpg" alt="">
+      <h3 class="txt2">tu aimes la medecine?</h3>
+      <button><a href="../index.html">clique ici</a></button>
+    </div>
+  </div>
+
+  <!-- ✅ CORRECTION : footer sorti de la <section> inutile -->
+  <footer class="footer">
+    <div class="footer-social">
+      <h3 class="footer-titre">VOUS POUVEZ NOUS SUIVRE ICI</h3>
+      <div class="footer-icones">
+        <a href="#" class="icone"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icone"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="icone"><i class="fab fa-snapchat"></i></a>
+        <a href="#" class="icone"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h3 class="footer-titre">CONTACTS</h3>
+      <p>
+        infoline:<br />
+        <strong>0172277880</strong><br />
+        <strong>0718574544</strong>
+      </p>
+      <p class="footer-email">my way 6_T@gmail.com</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('ouvert');
+    }
+  </script>
+
 </body>
 </html>
