@@ -1,6 +1,4 @@
-/* ================================
-   RESET
-================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -310,47 +308,184 @@ body {
   }
 }
 
-/* Bouton hamburger : caché sur grand écran */
+
 .hamburger {
-  display: none;            /* invisible sur desktop */
+  display: none;          
   flex-direction: column;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: auto;        /* pousse le bouton à droite */
+  margin-left: auto;
   padding: 0.5rem;
 }
 
-/* Les trois barres du hamburger */
+
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background: #ffffff;      /* barres blanches */
+  background: #ffffff;     
   border-radius: 3px;
 }
 
 /* Sur mobile : affiche le hamburger, cache les liens */
 @media (max-width: 700px) {
   .hamburger {
-    display: flex;          /* visible sur mobile */
+    display: flex;         
   }
 
   .navbar__links {
-    display: none;          /* caché par défaut sur mobile */
-    flex-direction: column; /* liens en colonne */
-    position: absolute;     /* se pose sous la navbar */
+    display: none;         
+    flex-direction: column; 
+    position: absolute;    
     top: 80px;
     left: 0;
     width: 100%;
-    background: #2e7d2e;    /* même vert que la navbar */
+    background: #2e7d2e;   
     padding: 1rem 2rem;
     gap: 1rem;
   }
 
-  /* Quand le menu est ouvert */
+ 
   .navbar__links.ouvert {
     display: flex;
   }
 }
+
+/* tablette */
+@media (max-width: 1024px) {
+  .NAVBAR {
+    padding: 0 1.5rem;
+  }
+
+  .navbar__links {
+    gap: 1.5rem;
+    margin-right: 2rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .hero__content {
+    width: 90%;
+    height: auto;
+    padding-top: 100px;
+  }
+
+  .ques {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .deux,
+  .un {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .a,
+  .u {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .txt1,
+  .txt2,
+  .txt3 {
+    font-size: 1.3rem;
+    bottom: auto;
+    top: 20px;
+  }
+
+  .footer {
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+
+   /* RESPONSIVE TÉLÉ  */
+
+@media (min-width: 1600px) {
+  .NAVBAR {
+    height: 100px;
+  }
+
+  .logo-icon img {
+    width: 220px;
+    height: 100px;
+  }
+
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .hero__title {
+    font-size: 3.5rem;
+    width: 80%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .hero__content {
+    width: 80%;
+    height: auto;
+    padding-top: 120px;
+  }
+
+  .ques {
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+  }
+
+  .a,
+  .u {
+    min-height: 700px;
+  }
+
+  .txt1,
+  .txt2,
+  .txt3 {
+    font-size: 2.5rem;
+    bottom: 800px;
+  }
+
+  .a button,
+  .u button {
+    font-size: 1.5rem;
+    padding: 1.5rem 5rem;
+  }
+
+  .footer {
+    padding: 5rem 10rem;
+  }
+
+  .footer-titre {
+    font-size: 1.5rem;
+  }
+
+  .icone {
+    font-size: 3rem;
+  }
+
+  .footer-contact p {
+    font-size: 1.3rem;
+  }
+}
+
+ 
+
+    
+    
+   
+    
